@@ -6,7 +6,7 @@ public class StringAddCalculator {
             return 0;
         }
 
-        String[] values = text.split("[,:]");
+        String[] values = split(text);
         int result = 0;
         for (String value : values) {
             result += Integer.parseInt(value);
@@ -17,5 +17,9 @@ public class StringAddCalculator {
 
     private static boolean isNullOrBlank(String text) {
         return text == null || text.isEmpty();
+    }
+
+    private static String[] split(String text) {
+        return text.split("[,:]");
     }
 }
