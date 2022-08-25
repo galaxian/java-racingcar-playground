@@ -21,6 +21,9 @@ public class StringAddCalculator {
         int[] numbers = new int[values.length];
         for (int i = 0; i < values.length; i++) {
             numbers[i] = Integer.parseInt(values[i]);
+            if (numbers[i] < 0) {
+                throw new RuntimeException("0 이상의 수만 계산 가능합니다.");
+            }
         }
         return numbers;
     }
